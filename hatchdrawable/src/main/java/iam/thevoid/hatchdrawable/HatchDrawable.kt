@@ -2,8 +2,9 @@ package iam.thevoid.hatchdrawable
 
 import android.graphics.*
 import android.graphics.drawable.Drawable
+import kotlin.text.Typography.degree
 
-class HatchDrawable(
+class HatchDrawable @JvmOverloads constructor(
     private val lineWidth: Float = 1f,
     private val lineSpacing: Float = 4f,
     private val lineColor: Int = Color.BLACK,
