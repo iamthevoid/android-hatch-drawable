@@ -28,4 +28,4 @@ something for your View.
 
 Demo app attached. Some screenshots below:
 
-![1](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/1.png) ![2](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/2.png) ![3](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/3.png)
+![1](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/1.png)  ![2](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/2.png)  ![3](https://github.com/iamthevoid/android-hatch-drawable/blob/master/screenshot/3.png)
