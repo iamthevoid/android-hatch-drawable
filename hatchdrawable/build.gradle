@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.novoda.bintray-release'
+
+
 android {
     compileSdkVersion 28
 
@@ -26,6 +29,17 @@ android {
         }
     }
 
+}
+
+publish {
+    groupId = 'iam.thevoid.hatchdrawable'
+    artifactId = 'hatchdrawable'
+    publishVersion = '0.1'
+    desc = 'Hatch drawable for android'
+    licences = ['Apache-2.0']
+    uploadName = 'HatchDrawable'
+    userOrg = 'void'
+    website = 'https://github.com/iamthevoid/android-hatch-drawable.git'
 }
 
 dependencies {

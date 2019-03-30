@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
@@ -42,6 +43,9 @@ class MainActivity : Activity(), Notifier {
     private lateinit var lineWidthSeek: SeekBar
     private lateinit var lineWidthText: TextView
 
+    private lateinit var checkboxWidth : CheckBox
+    private lateinit var checkboxSpace : CheckBox
+
     private var dp = 0f
 
     @SuppressLint("SetTextI18n")
@@ -62,7 +66,8 @@ class MainActivity : Activity(), Notifier {
         lineWidthText = findViewById(R.id.width_tv)
         colorPreview = findViewById(R.id.color_preview)
         colorPreviewText = findViewById(R.id.color_preview_text)
-        colorPreviewText = findViewById(R.id.color_preview_text)
+        checkboxSpace = findViewById(R.id.checkboxSpacing)
+        checkboxWidth = findViewById(R.id.checkboxWidth)
         hatch = findViewById(R.id.hatch)
         dp = resources.getDimensionPixelSize(R.dimen.dp).toFloat()
 
@@ -97,6 +102,10 @@ class MainActivity : Activity(), Notifier {
         greenImage.setImageDrawable(ColorDrawable(Color.GREEN))
         blueImage.setImageDrawable(ColorDrawable(Color.BLUE))
 
+        checkboxSpace.isChecked = rand.nextBoolean()
+        checkboxSpace.setOnCheckedChangeListener { _, _ -> notifyChanged() }
+        checkboxWidth.isChecked = rand.nextBoolean()
+        checkboxWidth.setOnCheckedChangeListener { _, _ -> notifyChanged() }
     }
 
     override fun notifyChanged() {
@@ -137,7 +146,10 @@ class MainActivity : Activity(), Notifier {
                 spacing * dp,
                 Color.parseColor("#$colorString"),
                 angle
-        )
+        ).apply {
+            widthLinear = checkboxWidth.isChecked
+            spacingLinear = checkboxSpace.isChecked
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
             hatch.background = drawable
