@@ -1,6 +1,12 @@
 # Android hatch-drawable library
 ###### Helps to simply add hatch to you app (only for square views)
 
+Add to project
+
+```
+    compile 'iam.thevoid.hatchdrawable:hatchdrawable:0.1'
+```
+
 Written in Kotlin with @JvmOverloads constructor
 
 ```

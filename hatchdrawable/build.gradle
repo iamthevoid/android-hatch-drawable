@@ -10,8 +10,6 @@ apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 28
 
-
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
@@ -28,7 +26,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 publish {
@@ -38,7 +35,7 @@ publish {
     desc = 'Hatch drawable for android'
     licences = ['Apache-2.0']
     uploadName = 'HatchDrawable'
-    userOrg = 'void'
+    userOrg = 'iamthevoid'
     website = 'https://github.com/iamthevoid/android-hatch-drawable.git'
 }
 
